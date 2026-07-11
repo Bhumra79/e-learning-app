@@ -1,0 +1,94 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="row justify-content-center">
+
+    <div class="col-md-7">
+
+        <div class="card shadow border-0 rounded-4 p-4">
+
+            <h2 class="text-center mb-4">
+                Upload Notes 📄
+            </h2>
+
+            <form
+            action="/notes"
+            method="POST"
+            enctype="multipart/form-data">
+
+                <!-- Title -->
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Note Title
+                    </label>
+
+                    <input
+                    type="text"
+                    name="title"
+                    class="form-control"
+                    required>
+
+                </div>
+
+                <!-- Subject -->
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Subject
+                    </label>
+
+                    <input
+                    type="text"
+                    name="subject"
+                    class="form-control"
+                    placeholder="Subject"
+                    required>
+
+                </div>
+
+                <!-- Description -->
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Description
+                    </label>
+
+                    <textarea
+                    name="description"
+                    rows="4"
+                    placeholder="Brief description about the notes..."
+                    class="form-control">
+                    </textarea>
+
+                </div>
+
+                <!-- File Upload -->
+                <div class="mb-4">
+
+                    <label class="form-label">
+                        Upload PDF
+                    </label>
+
+                    <input
+                    type="file"
+                    name="file"
+                    class="form-control"
+                    accept=".pdf"
+                    required>
+
+                </div>
+
+                <!-- Submit -->
+                <button class="btn btn-dark w-100">
+
+                    Upload Notes
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
