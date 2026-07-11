@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate') %>
+
+    <h2 class="mb-4">Register</h2>
+
+    <form action="/register" method="POST">
+
+        <input type="text" name="username" placeholder="Username" class="form-control mb-3" required>
+        <br><br>
+        <input type="email" name="email" placeholder="Email" class="form-control mb-3" required>
+        <br><br>
+        <input type="password" name="password" placeholder="Password" class="form-control mb-3" required>
+        <br><br>
+        <button class="btn btn-dark">
+            Register
+        </button>
+
+    </form>
